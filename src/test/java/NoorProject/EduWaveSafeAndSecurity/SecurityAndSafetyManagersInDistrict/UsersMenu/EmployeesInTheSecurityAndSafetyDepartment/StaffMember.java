@@ -22,7 +22,6 @@ public class StaffMember {
     private By UserNameLabelLocator = By.partialLinkText("مدير الأمن والسلامة في إدارة التعليم");
     private By UsersTypeMenuLocator = By.id("divMenuItem_3923");
     private By MyInputLocator = By.id("myInput");
-
     private By UserNameLinkLocator = By.linkText("موظفون بإدارة الأمن والسلامة بإدارة التعليم");
     private By AddedNewUserLinkLocator = By.id("ctl00_PlaceHolderMain_lbtnAddManagementUser");
     private By UserIdFieldLocator = By.id("ctl00_PlaceHolderMain_tbIdentification");
