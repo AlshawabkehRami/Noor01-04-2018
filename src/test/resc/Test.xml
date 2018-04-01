@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 
-<suite name="All Test Cases">
+<suite name="قائمة الاعدادت لدى مدير عام الأمن والسلامة المدرسية">
 
+    <test name="أنواع الزيارات">
 
-    <suite-files>
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.Settings.EditVistis"/>
+        </classes>
 
-        <suite-file path="QA/SafetyAndSecurity/GeneralDirectorOfSchoolSecurityAndSafety/TheReportsGDOSSAS.xml"/>
-        <suite-file path="QA/SafetyAndSecurity/GeneralDirectorOfSchoolSecurityAndSafety/TypesOfVisitsGDOSSAS.xml"/>
-
-
-
-    </suite-files>
-
+    </test>
 
 </suite>

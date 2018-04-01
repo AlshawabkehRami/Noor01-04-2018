@@ -16,7 +16,7 @@ import java.util.Random;
 import static NoorProject.Other.NoorLogin.browserQA;
 import static NoorProject.Other.NoorLogin.waitQA;
 
-public class TypesOfVisits {
+public class ADDVistis {
 
 
     private By SwitchProfileLocator = By.id("ctl00_oHeader_divSwitchUser");
@@ -71,49 +71,5 @@ public class TypesOfVisits {
     }
 
 
-    private By YesButton = By.id("ctl00_ibtnYes");
 
-    @Test
-    public void DeleteTypesOfVisits() {
-
-        WebElement TableLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(TableLoactor));
-
-        List ListRowsXpath = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[1]/div[2]/div/div/table[1]/tbody/tr/td[1]"));
-        int NoOfRows = ListRowsXpath.size() - 1;
-        int NoOfRowsparameter = NoOfRows;
-
-        By DeleteLinkLocator = By.id("ctl00_PlaceHolderMain_gvVisitType_ctl" + NoOfRowsparameter + "_lbtnDelete");
-        WebElement DeleteLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeleteLinkLocator));
-        DeleteLinkLocatorWait.click();
-
-
-        browserQA.findElement(YesButton).click();
-
-        By ValidationMesageLocator = By.id("ctl00_PlaceHolderMain_lblOperationResult");
-
-        WebElement ValidationMesageLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ValidationMesageLocator));
-        String ValidationMesageLocatorWaitString = browserQA.findElement(ValidationMesageLocator).getText();
-        String ValidationMesageString = "لا يمكن الحذف لارتباط نوع الزيارة ببطاقة مدرسة.";
-
-        Assert.assertNotEquals(ValidationMesageLocatorWaitString , ValidationMesageString , "لايمكن حذف الزيارة المدرسية");
-
-
-    }
-
-    private By txt_edit_Locator = By.id("ctl00_PlaceHolderMain_gvVisitType_ctl08_tbVisitTypeDesc");
-    private By save_link_Locator = By.id("ctl00_PlaceHolderMain_gvVisitType_ctl08_lbtnUpdate");
-    private By edit_link_Locator = By.id("ctl00_PlaceHolderMain_gvVisitType_ctl08_lbtnEdit");
-
-    @Test
-    public void EditTypesOfVisits() {
-
-
-        By txt_edit_Locator = By.id("ctl00_PlaceHolderMain_gvVisitType_ctl08_tbVisitTypeDesc");
-        waitQA.until(ExpectedConditions.visibilityOfElementLocated(edit_link_Locator)).click();
-        waitQA.until(ExpectedConditions.visibilityOfElementLocated(txt_edit_Locator)).clear();
-        Random random = new Random();
-        int rand = random.nextInt();
-        waitQA.until(ExpectedConditions.visibilityOfElementLocated(txt_edit_Locator)).sendKeys("Raad" + rand);
-        waitQA.until(ExpectedConditions.visibilityOfElementLocated(save_link_Locator)).click();
-    }
 }
