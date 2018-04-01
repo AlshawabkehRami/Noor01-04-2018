@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
+
 <!--
   ~ Created By Rami AlShawabkeh 4/1/18 3:31 PM
   -->
@@ -11,17 +12,16 @@
 
 <suite name="مسؤول الامن والسلامة قي المدرسة">
 
-    <test name="المدراء العامون للأمن والسلامة المدرسية">
+    <test name="السلامة المدرسية \مسؤول الامن المدرسي بالمدرسة">
 
         <classes>
             <class name="NoorProject.Other.NoorLogin">
                 <methods>
-                    <include name="EmisadminUser"/>
+                    <include name="SchoolSecurityAndSafetyInSchoolQA"/>
                 </methods>
             </class>
-            <class name="NoorProject.EMISAdmin.UsersMenu.LegalResearchers.LegalResearchers"/>
-
-
+            <class name="NoorProject.EduWaveSafeAndSecurity.SchoolSecurityAndSafetyInSchool.Forms.SafteyForms"/>
+            <class name="NoorProject.Other.NoorLogOut"/>
         </classes>
 
     </test>
