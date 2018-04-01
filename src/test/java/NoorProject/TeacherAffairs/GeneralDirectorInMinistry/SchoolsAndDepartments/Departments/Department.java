@@ -6,6 +6,7 @@ package NoorProject.TeacherAffairs.GeneralDirectorInMinistry.SchoolsAndDepartmen
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -17,8 +18,8 @@ import static NoorProject.Other.NoorLogin.waitQA;
 public class Department {
 
 
-    private By schools_and_depts_Locator = By.xpath("/html/body/form/div[6]/div/div[1]/div/ul/li[9]/a");
-    private By depts_Locator = By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div/div[2]/div[3]/div[1]/div/div/div[3]/a");
+    private By SchooleAndDeptsMainMenuLocator = By.id("divMenuItem_6543");
+    private By DeptsLoactor = By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div/div[2]/div[3]/div[1]/div/div/div[3]/a");
     private By drop_down_list_level_Locator = By.id("select2-ctl00_PlaceHolderMain_ddlLevel-container");
     private By txt_field_Locator = By.xpath("/html/body/span/span/span[1]/input");
     private By btn_search_Locator = By.id("ctl00_PlaceHolderMain_ibtnSearch");
@@ -32,8 +33,12 @@ public class Department {
     @Test
     public void AddModeratorUser() throws InterruptedException {
 
-        browserQA.findElement(schools_and_depts_Locator).click();
-        waitQA.until(ExpectedConditions.visibilityOfElementLocated(depts_Locator)).click();
+        WebElement SchooleAndDeptsMainMenuLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SchooleAndDeptsMainMenuLocator));
+        SchooleAndDeptsMainMenuLocatorWait.click();
+
+        WebElement DeptsLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(DeptsLoactor));
+        DeptsLoactorWait.click();
+
         waitQA.until(ExpectedConditions.visibilityOfElementLocated(drop_down_list_level_Locator)).click();
         waitQA.until(ExpectedConditions.visibilityOfElementLocated(txt_field_Locator)).sendKeys("وزار" , Keys.ENTER);
         Thread.sleep(300);

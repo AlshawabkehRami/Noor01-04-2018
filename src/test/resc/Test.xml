@@ -9,14 +9,15 @@
 
 <suite name="مدير عام الامن والسلامة -نماذج الامن والسلامة">
 
-    <test name="اضافة بطافات المدارس">
+    <test name="أضافةالاقسام">
+
         <classes>
             <class name="NoorProject.Other.NoorLogin">
                 <methods>
-                    <include name="StaffSAndSInDistrictLogin"/>
+                    <include name="DirectorGeneralofTeachersAffairsintheMinistry"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.StaffSAndSInDistrict.Cards.SchoolCards"/>
+            <class name="NoorProject.TeacherAffairs.GeneralDirectorInMinistry.SchoolsAndDepartments.Departments.Department"/>
         </classes>
 
     </test>
