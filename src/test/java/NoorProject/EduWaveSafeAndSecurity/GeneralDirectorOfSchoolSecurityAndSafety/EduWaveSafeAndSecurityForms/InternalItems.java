@@ -36,7 +36,7 @@ public class InternalItems {
         WebElement UserLabelLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(UserNameLabelLocator));
         UserLabelLocatorWait.click();
 
-        for (int i = 0; i < 10; i++) {
+        //for (int i = 0; i < 10; i++) {
         WebElement FormMainMenuLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(FormMainMenuLoactor));
         FormMainMenuLoactorWait.click();
 
@@ -64,7 +64,7 @@ public class InternalItems {
         BTNBackWait1.click();
 
 
-         }
+        // }
 
 
     }
