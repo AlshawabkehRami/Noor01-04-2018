@@ -19,7 +19,7 @@ public class SchoolCardInformation {
     private By ReportsMainMenuLocator = By.id("divMenuItem_304");
     private By SerachLinkReportLocator = By.id("lisearch_list");
     private By SerachTextReportLocator = By.id("myInput");
-    private By ReportLinkLocator = By.xpath("معلومات بطاقات المدارس");
+    private By ReportLinkLocator = By.linkText("معلومات بطاقات المدارس");
     private By ddlSchoolLocator = By.id("select2-ctl00_PlaceHolderMain_ddlSchool-container");
     private By ddlSchoolSearchLocator = By.xpath("/html/body/span/span/span[1]/input");
     private By BTNSearchLocator = By.id("ctl00_PlaceHolderMain_ibtnSearch");

@@ -33,7 +33,7 @@ public class InternalItems {
         WebElement SwitchProfileLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SwitchProfileLocator));
         SwitchProfileLocatorWait.click();
 
-        WebElement UserLabelLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SwitchProfileLocator));
+        WebElement UserLabelLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(UserNameLabelLocator));
         UserLabelLocatorWait.click();
 
         for (int i = 0; i < 10; i++) {
@@ -60,7 +60,7 @@ public class InternalItems {
         WebElement BTNBackWait2 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BTNBack2));
         BTNBackWait2.click();
 
-        WebElement BTNBackWait1 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BTNBack2));
+        WebElement BTNBackWait1 = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BTNBack3));
         BTNBackWait1.click();
 
 
