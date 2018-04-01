@@ -46,8 +46,13 @@ public class SchoolCardInformation {
         ddlSupervisionCenterLocatorWait.click();
         browserQA.findElement(ddlSupervisionCenterSearchLocator).sendKeys("مكتب الخالدية الشمالية" , Keys.ENTER);
 
-        WebElement ddlSchoolLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlSchoolLocator));
-        ddlSchoolLocatorWait.click();
+        try {
+            WebElement ddlSchoolLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlSchoolLocator));
+            ddlSchoolLocatorWait.click();
+        } catch (Exception e) {
+            WebElement ddlSchoolLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlSchoolLocator));
+            ddlSchoolLocatorWait.click();
+        }
         browserQA.findElement(ddlSchoolSearchLocator).sendKeys("مدرسة سعيد بن المسيب التانوية" , Keys.ENTER);
 
         WebElement BTNSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BTNSearchLocator));

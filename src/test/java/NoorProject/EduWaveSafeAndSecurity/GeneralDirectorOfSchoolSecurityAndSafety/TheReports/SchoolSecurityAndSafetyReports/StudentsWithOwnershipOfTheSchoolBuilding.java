@@ -37,49 +37,56 @@ public class StudentsWithOwnershipOfTheSchoolBuilding {
 
     @Test
     public void StudentsWithOwnershipOfTheSchoolBuildingReport() {
+
+
         browserQA.findElement(SwitchProfileLocator).click();
         browserQA.findElement(UserNameLabelLocator).click();
-        browserQA.findElement(ReportMenuItemLoactor).click();
 
-        browserQA.findElement(SearchLinkLocator).click();
+        //for (int i=0;i<10;i++) {
+            browserQA.findElement(ReportMenuItemLoactor).click();
 
-        WebElement TheRwportLoactorWait=waitQA.until(ExpectedConditions.visibilityOfElementLocated(TheRwportLoactor));
-        TheRwportLoactorWait.click();
+            browserQA.findElement(SearchLinkLocator).click();
 
-        WebElement GenderLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(GenderLocator));
-        GenderLocatorWait.click();
-        browserQA.findElement(Femalelocator).sendKeys("بنات" , Keys.ENTER);
+            WebElement TheRwportLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(TheRwportLoactor));
+            TheRwportLoactorWait.click();
+
+            WebElement GenderLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(GenderLocator));
+            GenderLocatorWait.click();
+            browserQA.findElement(Femalelocator).sendKeys("بنات" , Keys.ENTER);
 
 
-        try {
-            WebElement ddlDistrictLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlDistrictLocator));
-            ddlDistrictLocatorWait.click();
-        } catch (Exception e) {
-            WebElement ddlDistrictLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlDistrictLocator));
-            ddlDistrictLocatorWait.click();
-        }
+            try {
+                WebElement ddlDistrictLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlDistrictLocator));
+                ddlDistrictLocatorWait.click();
+            } catch (Exception e) {
+                WebElement ddlDistrictLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlDistrictLocator));
+                ddlDistrictLocatorWait.click();
+            }
 
-        browserQA.findElement(ddlDistrictSearchLocator).sendKeys("عمان" , Keys.ENTER);
+            browserQA.findElement(ddlDistrictSearchLocator).sendKeys("عمان" , Keys.ENTER);
 
-        try {
-            WebElement ddlSupervisionCenteLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlSupervisionCenteLocator));
-            ddlSupervisionCenteLocatorWait.click();
-        } catch (Exception e) {
-            WebElement ddlSupervisionCenteLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlSupervisionCenteLocator));
-            ddlSupervisionCenteLocatorWait.click();
-        }
+            try {
+                WebElement ddlSupervisionCenteLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlSupervisionCenteLocator));
+                ddlSupervisionCenteLocatorWait.click();
+            } catch (Exception e) {
+                WebElement ddlSupervisionCenteLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlSupervisionCenteLocator));
+                ddlSupervisionCenteLocatorWait.click();
+            }
 
-        browserQA.findElement(ddlSupervisionCenteSearchLocator).sendKeys("عمان" , Keys.ENTER);
+            browserQA.findElement(ddlSupervisionCenteSearchLocator).sendKeys("عمان" , Keys.ENTER);
 
-        WebElement ibtnSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ibtnSearchLocator));
-        ibtnSearchLocatorWait.click();
+            WebElement ibtnSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ibtnSearchLocator));
+            ibtnSearchLocatorWait.click();
 
-        By ReportTitleInsidLoactor = By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[5]/div/span/div/table/tbody/tr[4]/td[3]/div/div[1]/div/table/tbody/tr/td/table/tbody/tr[1]/td/table/tbody/tr/td/table/tbody/tr[7]/td[3]/table/tbody/tr/td/div/div/span");
+            By ReportTitleInsidLoactor = By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[5]/div/span/div/table/tbody/tr[4]/td[3]/div/div[1]/div/table/tbody/tr/td/table/tbody/tr[1]/td/table/tbody/tr/td/table/tbody/tr[7]/td[3]/table/tbody/tr/td/div/div/span");
 
-        String ReportTitleInsidLoactorElement = browserQA.findElement(ReportTitleInsidLoactor).getText();
-        String ReportTitleInsidString = " عدد الطلاب مع ملكية مبنى المدرسة";
+            WebElement ReportTitleInsidLoactorWait=waitQA.until(ExpectedConditions.visibilityOfElementLocated(ReportTitleInsidLoactor));
 
-        Assert.assertEquals(ReportTitleInsidLoactorElement , ReportTitleInsidString , "لايمكن عرض التقرير المطلوب");
+            String ReportTitleInsidLoactorElement = browserQA.findElement(ReportTitleInsidLoactor).getText();
+            String ReportTitleInsidString = " عدد الطلاب مع ملكية مبنى المدرسة";
+
+            Assert.assertEquals(ReportTitleInsidLoactorElement , ReportTitleInsidString , "لايمكن عرض التقرير المطلوب");
+        //}
 
     }
 }

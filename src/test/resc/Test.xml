@@ -9,15 +9,15 @@
 
 <suite name="مدير عام الامن والسلامة -نماذج الامن والسلامة">
 
-    <test name="تقرير الأمن والسلامة-نسب التقييم على مستوى الوزارة/مدير عام الأمن والسلامة المدرسية">
+    <test name="تقرير بيانات المستخدمين بالمدارسة">
 
         <classes>
             <class name="NoorProject.Other.NoorLogin">
                 <methods>
-                    <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
+                    <include name="SchoolSecurityandSafetyOfficer"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.TheReports.SchoolSecurityAndSafetyReports.SecurityAndSafety_AssessmentRate"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SchoolSecurityandSafetyOfficer.TheReports.SchoolSecurityAndSafetyReports.UserDataInTheSchools"/>
         </classes>
 
     </test>

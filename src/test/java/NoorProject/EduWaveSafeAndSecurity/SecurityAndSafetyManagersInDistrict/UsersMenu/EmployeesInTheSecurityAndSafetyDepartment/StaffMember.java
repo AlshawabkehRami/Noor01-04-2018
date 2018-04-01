@@ -121,6 +121,7 @@ public class StaffMember {
         WebElement PassportNumberLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(PassportNumberLocator));
         PassportNumberLocatorWait.sendKeys("2" + RandomNumber);
 
+        Thread.sleep(1000);
 
         try {
             WebElement CLRIdentificationDateLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(CLRIdentificationDateLocator));

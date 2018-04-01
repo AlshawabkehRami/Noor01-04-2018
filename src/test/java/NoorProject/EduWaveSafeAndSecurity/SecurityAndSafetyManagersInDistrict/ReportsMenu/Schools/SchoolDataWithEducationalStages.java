@@ -21,7 +21,7 @@ public class SchoolDataWithEducationalStages {
     private By SerachLinkReportLocator = By.id("lisearch_list");
     private By SerachTextReportLocator = By.id("myInput");
 
-    private By TheReportNameLocator = By.xpath("بيانات المدرسة مع المراحل التعليمية");
+    private By TheReportNameLocator = By.linkText("بيانات المدرسة مع المراحل التعليمية");
     private By OfficeNameLOcater = By.id("select2-ctl00_PlaceHolderMain_ddlSupervisionCenter-container");
     private By OfficeNameSearchLOcater = By.xpath("/html/body/span/span/span[1]/input");
     private By SearchBTNLocator = By.id("ctl00_PlaceHolderMain_ibtnSearch");
