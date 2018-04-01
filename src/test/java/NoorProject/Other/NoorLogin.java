@@ -215,4 +215,29 @@ public class NoorLogin {
         WebElement LoginInforamtionLabelWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(LoginInforamtionLabelLocator));
         Assert.assertEquals(LoginInforamtionLabelWait.getText() , "معلومات الدخول" , "لم تتم عملية الولوج الى النظام بالشكل الصحيح");
     }
+
+
+    //
+    //مسؤول الامن والسلامة المدرسية في المدرسة
+    @Test
+    public void SchoolSecurityAndSafetyInSchoolQA() {
+
+        // FirefoxDriverManager.getInstance().setup();
+        // browserQA = new FirefoxDriver();
+        ChromeDriverManager.getInstance().setup();
+        browserQA = new ChromeDriver();
+        waitQA = new WebDriverWait(browserQA , 10);
+        browserQA.navigate().to(URLQA);
+        browserQA.manage().timeouts().pageLoadTimeout(10 , TimeUnit.SECONDS);
+
+        WebElement LabelAssert = browserQA.findElement(loginFormLAbelLocator);
+
+        Assert.assertEquals(LabelAssert.getText() , "تسجيل الدخول" , "لم تتم عملية الولوج الى النظام بنجاح");
+        //********************************************************************
+
+        browserQA.findElement(UserName).sendKeys("Raadaa05");
+        browserQA.findElement(PassWord).sendKeys("1234" , Keys.ENTER);
+        WebElement LoginInforamtionLabelWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(LoginInforamtionLabelLocator));
+        Assert.assertEquals(LoginInforamtionLabelWait.getText() , "معلومات الدخول" , "لم تتم عملية الولوج الى النظام بالشكل الصحيح");
+    }
 }

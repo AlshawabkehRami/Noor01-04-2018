@@ -21,8 +21,6 @@ public class BuildingInformationOfficer {
     private By UserNameLabelLocator = By.linkText("موظف الأمن والسلامة المدرسية");
     private By ReportsMainMenuLocator = By.id("divMenuItem_325");
     private By SerachLoactor = By.id("lisearch_list");
-
-
     private By TheReprtNameLocator = By.linkText("بيانات المباني");
     private By GenderLocator = By.id("select2-ctl00_PlaceHolderMain_ddlLearningGender-container");
     private By GenderSearchLocator = By.xpath("/html/body/span/span/span[1]/input");

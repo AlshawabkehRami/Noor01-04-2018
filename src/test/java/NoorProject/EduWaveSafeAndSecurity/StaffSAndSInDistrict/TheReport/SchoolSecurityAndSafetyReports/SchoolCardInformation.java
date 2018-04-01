@@ -55,10 +55,13 @@ public class SchoolCardInformation {
         }
         browserQA.findElement(ddlSchoolSearchLocator).sendKeys("مدرسة سعيد بن المسيب التانوية" , Keys.ENTER);
 
-        WebElement BTNSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BTNSearchLocator));
         try {
+            WebElement BTNSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BTNSearchLocator));
+
             BTNSearchLocatorWait.click();
         } catch (Exception e) {
+            WebElement BTNSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(BTNSearchLocator));
+
             BTNSearchLocatorWait.click();
         }
 

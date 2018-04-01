@@ -26,6 +26,7 @@
                 path="QA/TeacherAffairs/DirectorOfTeachersAffairsInTheMinistry/SchoolsAndDepartments/DepartmentsDOTAIM.xml"/>
         <suite-file
                 path="QA/TeacherAffairs/DirectorOfTeachersAffairsInTheMinistry/Userlist/AddDirectorOfDepartmentsInTheMinistry.xml"/>
+        <suite-file path="QA/SafetyAndSecurity/SchoolSecurityAndSafetyInSchool/TheReport.xml"/>
 
 
     </suite-files>
