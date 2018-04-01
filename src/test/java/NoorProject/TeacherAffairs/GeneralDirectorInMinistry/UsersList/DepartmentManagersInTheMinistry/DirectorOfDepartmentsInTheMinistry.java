@@ -20,7 +20,7 @@ public class DirectorOfDepartmentsInTheMinistry {
 
     private By UsersMenuLocator = By.id("divMenuItem_4720");
     private By MyInputLocator = By.id("myInput");
-    private By TheReportLocator = By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div/div[2]/div[3]/div[1]/div/div/div[4]/a");
+    private By UserNameLinkLocator = By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div/div[2]/div[3]/div[1]/div/div/div[4]/a");
     private By AddedNewUserLinkLocator = By.id("ctl00_PlaceHolderMain_lbtnAddManagementUser");
     private By UserIdFieldLocator = By.id("ctl00_PlaceHolderMain_tbIdentification");
     private By IbtnCheckIdentificationIDLocator = By.id("ctl00_PlaceHolderMain_ibtnCheckIdentificationID0");
@@ -98,7 +98,7 @@ public class DirectorOfDepartmentsInTheMinistry {
         WebElement MyInputLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(MyInputLocator));
         MyInputLocatorWait.sendKeys("مديرو القسم");
 
-        WebElement TheReportLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(TheReportLocator));
+        WebElement TheReportLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(UserNameLinkLocator));
         TheReportLocatorWait.click();
 
         WebElement AddedNewUserLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddedNewUserLinkLocator));
