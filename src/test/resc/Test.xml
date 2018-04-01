@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+  ~ Created By Rami Alshawabkeh  3/18/18 3:53 PM
+  -->
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="مدير عام الامن والسلامة -نماذج الامن والسلامة">
+
+    <test name="بيانات المباني/مدير الامن والسلامة بادارة التعليم">
+        <classes>
+            <class name="NoorProject.Other.NoorLogin">
+                <methods>
+                    <include name="SecurityAndSafetyManagersInDistrictLogin"/>
+                </methods>
+            </class>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.BuildingAndMaintenanceReports.BuildingData"/>
+        </classes>
+    </test>
+
+
+
+</suite>
