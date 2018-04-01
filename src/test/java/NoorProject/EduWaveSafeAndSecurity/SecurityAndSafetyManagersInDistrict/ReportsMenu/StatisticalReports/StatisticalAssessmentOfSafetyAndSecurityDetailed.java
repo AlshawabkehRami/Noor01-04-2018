@@ -20,9 +20,7 @@ public class StatisticalAssessmentOfSafetyAndSecurityDetailed {
     private By ReportsMainMenuLocator = By.id("divMenuItem_304");
     private By SerachLinkReportLocator = By.id("lisearch_list");
     private By SerachTextReportLocator = By.id("myInput");
-
-
-    private By TheReportNameLocator = By.linkText("إحصائي عن تقييم الأمن والسلامة - تجميعي");
+    private By TheReportNameLocator = By.linkText("إحصائي عن تقييم الأمن والسلامة - تفصيلي");
     private By SupervisionCenterLocator = By.xpath("//*[@id=\"select2-ctl00_PlaceHolderMain_ddlSupervisionCenter-container\"]");
     private By SearchSupervisionCenterLocator = By.xpath("/html/body/span/span/span[1]/input");
     private By FormNameLocator = By.id("select2-ctl00_PlaceHolderMain_ddlFormName-container");

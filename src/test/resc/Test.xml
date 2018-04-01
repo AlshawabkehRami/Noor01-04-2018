@@ -9,19 +9,18 @@
 
 <suite name="مدير عام الامن والسلامة -نماذج الامن والسلامة">
 
-    <test name="أضافةالاقسام">
+    <test name="تقرير الأمن والسلامة-نسب التقييم على مستوى الوزارة/مدير عام الأمن والسلامة المدرسية">
 
         <classes>
             <class name="NoorProject.Other.NoorLogin">
                 <methods>
-                    <include name="DirectorGeneralofTeachersAffairsintheMinistry"/>
+                    <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
                 </methods>
             </class>
-            <class name="NoorProject.TeacherAffairs.GeneralDirectorInMinistry.SchoolsAndDepartments.Departments.Department"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.TheReports.SchoolSecurityAndSafetyReports.SecurityAndSafety_AssessmentRate"/>
         </classes>
 
     </test>
-
 
 
 </suite>

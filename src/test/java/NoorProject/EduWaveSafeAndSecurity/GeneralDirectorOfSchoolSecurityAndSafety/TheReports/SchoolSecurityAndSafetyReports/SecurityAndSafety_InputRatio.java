@@ -75,7 +75,7 @@ public class SecurityAndSafety_InputRatio {
         }
 
         WebElement ddlFormNameSearchLoactorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ddlFormNameSearchLoactor));
-        ddlFormNameSearchLoactorWait.sendKeys("Raad Sbaih94" , Keys.ENTER);
+        ddlFormNameSearchLoactorWait.sendKeys("Rami0550814558" , Keys.ENTER);
 
         try {
             WebElement btnSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(btnSearchLocator));
