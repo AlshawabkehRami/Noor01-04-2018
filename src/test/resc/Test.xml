@@ -9,15 +9,15 @@
 
 <suite name="مدير عام الامن والسلامة -نماذج الامن والسلامة">
 
-    <test name="تقرير بيانات المستخدمين بالمدارسة">
+    <test name="تعديل نموذج امن وسلامة غير منشور">
 
         <classes>
             <class name="NoorProject.Other.NoorLogin">
                 <methods>
-                    <include name="SchoolSecurityandSafetyOfficer"/>
+                    <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SchoolSecurityandSafetyOfficer.TheReports.SchoolSecurityAndSafetyReports.UserDataInTheSchools"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.EduWaveSafeAndSecurityForms.EditSafetyForms"/>
         </classes>
 
     </test>
