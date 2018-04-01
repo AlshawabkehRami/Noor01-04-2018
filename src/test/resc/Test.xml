@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!--
-  ~ Created By Rami Alshawabkeh  3/18/18 3:53 PM
+  ~ Created By Rami AlShawabkeh 4/1/18 3:31 PM
   -->
+
+
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 
-<suite name="مدير عام الامن والسلامة -نماذج الامن والسلامة">
+<suite name="مسؤول الامن والسلامة قي المدرسة">
 
-    <test name="تعديل نموذج امن وسلامة غير منشور">
+    <test name="نقرير بيانات المستخدمين بالمدارس ">
 
         <classes>
             <class name="NoorProject.Other.NoorLogin">
@@ -17,7 +19,7 @@
                     <include name="SchoolSecurityAndSafetyInSchoolQA"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SchoolSecurityAndSafetyInSchool.TheReport.SchoolCardInformation"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SchoolSecurityAndSafetyInSchool.TheReport.UserDataInSchools"/>
         </classes>
 
     </test>
