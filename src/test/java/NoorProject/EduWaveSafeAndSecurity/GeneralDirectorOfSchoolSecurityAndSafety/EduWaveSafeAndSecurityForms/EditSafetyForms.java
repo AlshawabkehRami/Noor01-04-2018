@@ -9,6 +9,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.Random;
@@ -66,13 +67,23 @@ public class EditSafetyForms {
         FormDescriptionLocatorWait.clear();
         FormDescriptionLocatorWait.sendKeys("Form" + random_numbers);
 
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         WebElement UpdateLinkLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(UpdateLinkLocator));
         UpdateLinkLocatorWait.click();
         UpdateLinkLocatorWait.click();
 
+        By UpadteMessageLOcator=By.id("ctl00_PlaceHolderMain_lblOpertioanlResult");
 
-        // }
+        WebElement UpadteMessageLOcatorWait=waitQA.until(ExpectedConditions.visibilityOfElementLocated(UpadteMessageLOcator));
+
+        String ActualResult=browserQA.findElement(UpadteMessageLOcator).getText();
+        String ExpectedResult="تمت عملية حفظ البيانات بنجاح.";
+
+             Assert.assertEquals(ActualResult,ExpectedResult,"لم تتم عملية التعديل بنجاح");
+
+
+
+         //}
 
 
     }
