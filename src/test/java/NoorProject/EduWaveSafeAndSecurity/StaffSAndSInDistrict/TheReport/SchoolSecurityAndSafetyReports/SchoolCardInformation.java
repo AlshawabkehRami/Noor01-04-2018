@@ -15,11 +15,11 @@ import static NoorProject.Other.NoorLogin.waitQA;
 
 public class SchoolCardInformation {
     private By SwitchProfileLocator = By.id("ctl00_oHeader_divSwitchUser");
-    private By UserNameLabelLocator = By.id("ctl00_oHeader_ulUserExtraProfiles");
+    private By UserNameLabelLocator = By.partialLinkText("موظف بإدارة الأمن والسلامة بإدارة التعليم");
     private By ReportsMainMenuLocator = By.id("divMenuItem_304");
-    private By SerachLinkReportLocator = By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/ul/li[2]/a/i");
+    private By SerachLinkReportLocator = By.id("lisearch_list");
     private By SerachTextReportLocator = By.id("myInput");
-    private By ReportLinkLocator = By.xpath("//*[@id=\"ctl00_PlaceHolderMain_divSearchList\"]/div[4]/div[5]/a");
+    private By ReportLinkLocator = By.xpath("معلومات بطاقات المدارس");
     private By ddlSchoolLocator = By.id("select2-ctl00_PlaceHolderMain_ddlSchool-container");
     private By ddlSchoolSearchLocator = By.xpath("/html/body/span/span/span[1]/input");
     private By BTNSearchLocator = By.id("ctl00_PlaceHolderMain_ibtnSearch");

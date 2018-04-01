@@ -16,12 +16,12 @@ import static NoorProject.Other.NoorLogin.waitQA;
 
 public class NumberOfStudentsWhoOwnTheSchoolBuildingStaff {
 
-    private By Switch_profile_Locator = By.xpath("/html/body/form/div[4]/div[2]/div[1]/div[2]/a");
-    private By Director_of_security_and_safety_Locator = By.xpath("/html/body/form/div[4]/div[2]/div[1]/div[2]/div/div/div/div[1]/div/ul/li/a");
-    private By Reports_menu_Locator = By.xpath("/html/body/form/div[6]/div/div[1]/div/ul/li[2]/a");
-    private By Search_logo_Locator = By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/ul/li[2]/a/i");
+    private By SwitchProfileLocator = By.id("ctl00_oHeader_divSwitchUser");
+    private By UserNameLabelLocator = By.partialLinkText("موظف بإدارة الأمن والسلامة بإدارة التعليم");
+    private By reports_menu_Locator = By.id("divMenuItem_304");
+    private By SerachLinkReportLocator = By.id("lisearch_list");
     private By Search_field_Locator = By.id("myInput");
-    private By TheREportLOcator = By.xpath("//*[@id=\"ctl00_PlaceHolderMain_divSearchList\"]/div[2]/div[2]/a");
+    private By TheReportNameLocator = By.linkText("عدد الطلاب مع ملكية مبنى المدرسة");
     private By Drop_down_list_Locator = By.id("select2-ctl00_PlaceHolderMain_ddlSupervisionCenter-container");
     private By Txt_field = By.xpath("/html/body/span/span/span[1]/input");
     private By Btn_search = By.id("ctl00_PlaceHolderMain_ibtnSearch");
@@ -30,15 +30,15 @@ public class NumberOfStudentsWhoOwnTheSchoolBuildingStaff {
 //عدد الطلاب مع ملكية مبنى المدرسة
     @Test
     public void NumberOfStudentsWhoOwnTheSchoolBuilding() {
-        browserQA.findElement(Switch_profile_Locator).click();
-        browserQA.findElement(Director_of_security_and_safety_Locator).click();
-        WebElement reports_menu_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(Reports_menu_Locator));
+        browserQA.findElement(SwitchProfileLocator).click();
+        browserQA.findElement(UserNameLabelLocator).click();
+        WebElement reports_menu_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(reports_menu_Locator));
         reports_menu_Locator_wait.click();
-        WebElement search_logo_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(Search_logo_Locator));
+        WebElement search_logo_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SerachLinkReportLocator));
         search_logo_Locator_wait.click();
         WebElement search_field_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(Search_field_Locator));
         search_field_Locator_wait.sendKeys("عدد الطلاب مع ملكية مبنى المدرسة");
-        WebElement NumberOfStudentsWhoOwnTheSchoolBuilding_link_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(TheREportLOcator));
+        WebElement NumberOfStudentsWhoOwnTheSchoolBuilding_link_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(TheReportNameLocator));
         NumberOfStudentsWhoOwnTheSchoolBuilding_link_wait.click();
         WebElement drop_down_list_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(Drop_down_list_Locator));
         drop_down_list_Locator_wait.click();

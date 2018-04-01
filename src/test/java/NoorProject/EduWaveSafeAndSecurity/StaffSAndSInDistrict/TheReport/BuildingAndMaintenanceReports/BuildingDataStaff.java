@@ -16,26 +16,26 @@ import static NoorProject.Other.NoorLogin.waitQA;
 public class BuildingDataStaff {
 
 
-    private  By SwitchProfileLocator = By.id("ctl00_oHeader_divSwitchUser");
-    private  By UserNameLabelLocator = By.id("ctl00_oHeader_ulUserExtraProfiles");
-    private  By ReportsMainMenuLocator = By.id("divMenuItem_304");
-    private  By SerachLinkReportLocator = By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/ul/li[2]/a/i");
+    private By SwitchProfileLocator = By.id("ctl00_oHeader_divSwitchUser");
+    private By UserNameLabelLocator = By.partialLinkText("موظف بإدارة الأمن والسلامة بإدارة التعليم");
+    private By ReportsMainMenuLocator = By.id("divMenuItem_304");
+    private By SerachLinkReportLocator = By.id("lisearch_list");
     private By SerachTextReportLocator = By.id("myInput");
-    private  By ReportLinkLocator = By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div/div[2]/div[3]/div[1]/div/div[1]/div[2]/a");
+    private By ReportLinkLocator = By.linkText("بيانات المباني");
     private By SearchButtonLOcator = By.id("ctl00_PlaceHolderMain_ibtnSearch");
 
 
     //التقارير_تقارير المباني والصيانة
     //بيانات المباني
     @Test
-    public void BuildingInformationReport()   {
+    public void BuildingInformationReport() {
 
         browserQA.findElement(SwitchProfileLocator).click();
         browserQA.findElement(UserNameLabelLocator).click();
         browserQA.findElement(ReportsMainMenuLocator).click();
         WebElement SerachReportLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SerachLinkReportLocator));
         SerachReportLocatorWait.click();
-        WebElement SerachTextReportLocatorWait= waitQA.until(ExpectedConditions.visibilityOfElementLocated(SerachTextReportLocator));
+        WebElement SerachTextReportLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SerachTextReportLocator));
         SerachTextReportLocatorWait.sendKeys("بيانات المباني");
         browserQA.findElement(ReportLinkLocator).click();
         WebElement SearchButtonLOcatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SearchButtonLOcator));

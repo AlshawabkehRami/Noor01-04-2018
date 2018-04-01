@@ -14,10 +14,10 @@ import static NoorProject.Other.NoorLogin.waitQA;
 public class SchoolCards {
 
     private By SwitchProfileLocator = By.id("ctl00_oHeader_divSwitchUser");
-    private By UserNameLabelLocator = By.id("ctl00_oHeader_ulUserExtraProfiles");
+    private By UserNameLabelLocator = By.partialLinkText("موظف بإدارة الأمن والسلامة بإدارة التعليم");
+    private By SchoolCardsMenuLOcator = By.id("divMenuItem_5988");
     private By DDLSupervisionCenterLocator = By.id("select2-ctl00_PlaceHolderMain_ddlSupervisionCenter-container");
     private By DDLSupervisionCenterSearchLocator = By.xpath("/html/body/span/span/span[1]/input");
-    private By SchoolCardsMenuLOcator = By.id("divMenuItem_5988");
     private By BTNBSearchLoactor = By.id("ctl00_PlaceHolderMain_ibtnSearch");
     private By TDSchoolCardLOcator = By.id("ctl00_PlaceHolderMain_gvSchools_ctl02_tdSchoolCard");
 

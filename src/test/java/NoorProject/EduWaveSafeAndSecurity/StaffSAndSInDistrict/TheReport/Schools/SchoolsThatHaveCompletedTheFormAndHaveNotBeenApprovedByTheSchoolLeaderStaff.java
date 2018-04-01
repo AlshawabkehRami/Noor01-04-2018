@@ -17,12 +17,12 @@ import static NoorProject.Other.NoorLogin.waitQA;
 public class SchoolsThatHaveCompletedTheFormAndHaveNotBeenApprovedByTheSchoolLeaderStaff {
 
 
-    private By switch_profile_Locator = By.xpath("/html/body/form/div[4]/div[2]/div[1]/div[2]/a");
-    private By director_of_security_and_safety_Locator = By.xpath("/html/body/form/div[4]/div[2]/div[1]/div[2]/div/div/div/div[1]/div/ul/li/a");
-    private By reports_menu_Locator = By.xpath("/html/body/form/div[6]/div/div[1]/div/ul/li[2]/a");
-    private By serach_logo_Locator = By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/ul/li[2]/a/i");
+    private By SwitchProfileLocator = By.id("ctl00_oHeader_divSwitchUser");
+    private By UserNameLabelLocator = By.partialLinkText("موظف بإدارة الأمن والسلامة بإدارة التعليم");
+    private By reports_menu_Locator = By.id("divMenuItem_304");
+    private By SerachLinkReportLocator = By.id("lisearch_list");
     private By search_field_Locator = By.id("myInput");
-    private By SchoolsThatHaveCompletedTheFormAndHaveNotBeenApprovedByTheSchoolLeader_link = By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div/div[2]/div[3]/div[1]/div/div[3]/div[2]/a");
+    private By TheReportNameLoactor = By.linkText("المدارس التي قامت بتعبئة الاستمارة ولم يتم اعتمادها من مدير المدرسة");
     private By drop_down_list_Locator = By.id("select2-ctl00_PlaceHolderMain_ddlFormName-container");
     private By txt_field_Locator = By.xpath("/html/body/span/span/span[1]/input");
     private By btn_search_Locator = By.id("ctl00_PlaceHolderMain_ibtnSearch");
@@ -31,15 +31,15 @@ public class SchoolsThatHaveCompletedTheFormAndHaveNotBeenApprovedByTheSchoolLea
 //المدارس التي قامت بتعبئة الاستمارة ولم يتم اعتمادها من قائد المدرسة
     @Test
     public void SchoolsThatHaveCompletedTheFormAndHaveNotBeenApprovedByTheSchoolLeader() throws InterruptedException {
-        browserQA.findElement(switch_profile_Locator).click();
-        browserQA.findElement(director_of_security_and_safety_Locator).click();
+        browserQA.findElement(SwitchProfileLocator).click();
+        browserQA.findElement(UserNameLabelLocator).click();
         WebElement reports_menu_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(reports_menu_Locator));
         reports_menu_Locator_wait.click();
-        WebElement search_logo_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(serach_logo_Locator));
+        WebElement search_logo_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SerachLinkReportLocator));
         search_logo_Locator_wait.click();
         WebElement search_field_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(search_field_Locator));
         search_field_Locator_wait.sendKeys("المدارس التي قامت بتعبئة الاستمارة ولم يتم اعتمادها");
-        WebElement SchoolsThatHaveCompletedTheFormAndHaveNotBeenApprovedByTheSchoolLeader_link_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(SchoolsThatHaveCompletedTheFormAndHaveNotBeenApprovedByTheSchoolLeader_link));
+        WebElement SchoolsThatHaveCompletedTheFormAndHaveNotBeenApprovedByTheSchoolLeader_link_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(TheReportNameLoactor));
         SchoolsThatHaveCompletedTheFormAndHaveNotBeenApprovedByTheSchoolLeader_link_Locator_wait.click();
         WebElement drop_down_list_Locator_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(drop_down_list_Locator));
         drop_down_list_Locator_wait.click();
