@@ -46,8 +46,6 @@ public class SecurityAndSafety_InputRatio {
     private By UserNameLabelLocator = By.linkText("موظف الأمن والسلامة المدرسية");
     private By ReportsMainMenuLocator = By.id("divMenuItem_325");
     private By SerachLoactor = By.id("lisearch_list");
-
-
     private By TheReportNameLocator = By.linkText("الأمن والسلامة - نسبة الإدخال");
     private By GenderLocator = By.id("select2-ctl00_PlaceHolderMain_ddlLearningGender-container");
     private By GenderSearchLoactor = By.xpath("/html/body/span/span/span[1]/input");
@@ -91,7 +89,7 @@ public class SecurityAndSafety_InputRatio {
 
         }
 
-        browserQA.findElement(ddlFormNameSearchLoactor).sendKeys("Raad Sbaih94" , Keys.ENTER);
+        browserQA.findElement(ddlFormNameSearchLoactor).sendKeys("Rami0550814558" , Keys.ENTER);
 
         try {
             WebElement btnSearchLocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(btnSearchLocator));
