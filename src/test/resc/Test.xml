@@ -9,14 +9,14 @@
 
 <suite name="مدير عام الامن والسلامة -نماذج الامن والسلامة">
 
-    <test name="بيانات المباني/مدير الامن والسلامة بادارة التعليم">
+    <test name="موظف صلاحيات مدير الامن والسلامة المدرسية بادارة التعليم">
         <classes>
             <class name="NoorProject.Other.NoorLogin">
                 <methods>
                     <include name="SecurityAndSafetyManagersInDistrictLogin"/>
                 </methods>
             </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.ReportsMenu.BuildingAndMaintenanceReports.BuildingData"/>
+            <class name="NoorProject.EduWaveSafeAndSecurity.SecurityAndSafetyManagersInDistrict.UsersMenu.PrivilegeUser.UserAuthorityEmployee"/>
         </classes>
     </test>
 
