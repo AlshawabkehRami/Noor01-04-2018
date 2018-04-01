@@ -1,21 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
+
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 
-<suite name="قائمة الاعدادت لدى مدير عام الأمن والسلامة المدرسية">
+<suite name="All Test Cases">
 
-    <test name="أنواع الزيارات">
 
-        <classes>
-            <class name="NoorProject.Other.NoorLogin">
-                <methods>
-                    <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
-                </methods>
-            </class>
-            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.Settings.EditVistis"/>
-        </classes>
+    <suite-files>
+        <suite-file path="QA/SafetyAndSecurity/SafetyAndSecurityOffice/TheReportsOfficerSASO.xml"/>
 
-    </test>
+
+<!--
+        <suite-file path="QA/SafetyAndSecurity/SchoolAdmin/TheReportSA.xml"/>
+-->
+<!--
+        <suite-file path="QA/SafetyAndSecurity/StaffSAndSInDistrict/SchoolCradsSSASID.xml"/>
+-->
+<!--
+        <suite-file path="QA/SafetyAndSecurity/StaffSAndSInDistrict/TheReportSSASID.xml"/>
+-->
+    <!--    <suite-file
+                path="QA/TeacherAffairs/DirectorOfTeachersAffairsInTheMinistry/SchoolsAndDepartments/DepartmentsDOTAIM.xml"/>-->
+     <!--   <suite-file
+                path="QA/TeacherAffairs/DirectorOfTeachersAffairsInTheMinistry/Userlist/AddDirectorOfDepartmentsInTheMinistry.xml"/>-->
+<!--
+        <suite-file path="QA/SafetyAndSecurity/SchoolSecurityAndSafetyInSchool/TheReport.xml"/>
+-->
+
+
+    </suite-files>
+
 
 </suite>

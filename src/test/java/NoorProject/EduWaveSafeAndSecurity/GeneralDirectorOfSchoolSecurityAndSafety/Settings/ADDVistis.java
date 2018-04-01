@@ -63,6 +63,8 @@ public class ADDVistis {
 
         By AddValidationMesage = By.id("ctl00_PlaceHolderMain_lblOperationResult");
 
+        WebElement AddValidationMesageWait=waitQA.until(ExpectedConditions.visibilityOfElementLocated(AddValidationMesage));
+
         String AddValidationMesageElementString = browserQA.findElement(AddValidationMesage).getText();
         String AddValidationMesageString = "نوع الزياره مدخل مسبقا.";
         Assert.assertNotEquals(AddValidationMesageElementString , AddValidationMesageString , "الرجاء ادخال نوع زيارة غير مستخدم مسبقا");
