@@ -52,7 +52,7 @@ public class TestNew {
 
         driverR.findElement(jhhhhh).click();
 
-        System.out.println("كل شي تمام ؟");
+        System.out.println("لللللللللللللللللللل ؟");
 
 
 
