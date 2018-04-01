@@ -55,21 +55,22 @@ public class DeleteSafetyForms {
         Thread.sleep(1000);
 
         List NumberOfRowsDelete = browserQA.findElements(By.xpath("/html/body/form/div[7]/div[2]/div[2]/div/div/div[3]/div[2]/div/div/table[1]/tbody/tr/td[1]"));
+
         int TableSizeDelete = NumberOfRowsDelete.size();
 
         String TableSizeDeleteParameter = String.format("%02d" , TableSizeDelete);
 
-        int PrametreDelete = Integer.parseInt(TableSizeDeleteParameter) - 2;
+        int PrametreDelete = Integer.parseInt(TableSizeDeleteParameter) - 1;
 
         String DeleteParmetreAfterConverte = String.format("%02d" , PrametreDelete);
 
-        System.out.println(TableSizeDelete);
+        System.out.println("TableSizzzzze===="+TableSizeDelete);
 
-        System.out.println(TableSizeDeleteParameter);
+        System.out.println("TableSizeDeleteParameter"+TableSizeDeleteParameter);
 
-        System.out.println(PrametreDelete);
+        System.out.println("PrametreDelete"+PrametreDelete);
 
-        System.out.println(DeleteParmetreAfterConverte);
+        System.out.println("DeleteParmetreAfterConverte"+DeleteParmetreAfterConverte);
 
 
         By DeleteLinkLocator = By.id("ctl00_PlaceHolderMain_gvForms_ctl" + DeleteParmetreAfterConverte + "_lbtnDelete");
@@ -89,7 +90,7 @@ public class DeleteSafetyForms {
         String ExpercteResult = "تم حذف النموذج بنجاح.";
 
 
-      //  Assert.assertEquals(ActualResult , ExpercteResult , "يوجد مشكلة في الية الحذف");
+      Assert.assertEquals(ActualResult , ExpercteResult , "يوجد مشكلة في الية الحذف");
 
     }
 
