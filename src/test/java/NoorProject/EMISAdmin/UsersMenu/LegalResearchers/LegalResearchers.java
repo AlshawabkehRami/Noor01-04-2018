@@ -225,13 +225,13 @@ public class LegalResearchers {
             browserQA.findElement(btnSaveLocator).click();
 
 
-            By ValidationMessageAfterAddTheUser = By.id("ctl00_PlaceHolderMain_lblResult");
+        /*    By ValidationMessageAfterAddTheUser = By.id("ctl00_PlaceHolderMain_lblResult");
             WebElement ValidationMessageAfterAddTheUserWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(ValidationMessageAfterAddTheUser));
 
             String MSELoctor = browserQA.findElement(ValidationMessageAfterAddTheUser).getText();
             String MesaString = "لا يمكن اضافة ملف لعدم وجود ملف له في شؤون المعلمين";
             Assert.assertNotEquals(MSELoctor , MesaString , "يجب اضافة ملف فئات تشكيلية ");
-
+*/
 /*
 
 

@@ -11,17 +11,14 @@
 
 <suite name="مسؤول الامن والسلامة قي المدرسة">
 
-    <test name="المدراء العامون للأمن والسلامة المدرسية">
+    <test name="تقرير عدد الطلاب مع ملكية مبنى المدرسة/مدير عام الأمن والسلامة المدرسية">
 
         <classes>
             <class name="NoorProject.Other.NoorLogin">
                 <methods>
-                    <include name="EmisadminUser"/>
+                    <include name="GeneralDirectorOfSchoolSecurityAndSafety"/>
                 </methods>
-            </class>
-            <class name="NoorProject.EMISAdmin.UsersMenu.LegalResearchers.LegalResearchers"/>
-
-
+            </class>            <class name="NoorProject.EduWaveSafeAndSecurity.GeneralDirectorOfSchoolSecurityAndSafety.TheReports.SchoolSecurityAndSafetyReports.StudentsWithOwnershipOfTheSchoolBuilding"/>
         </classes>
 
     </test>
