@@ -47,7 +47,7 @@ public class InfoSchool {
     //
 //بيانات المدرسة
     @Test
-    public void InfoSchoolReport()   {
+    public void InfoSchoolReport() throws InterruptedException {
 
         browserQA.findElement(SwitchProfileLocator).click();
         browserQA.findElement(UserNameLabelLocator).click();
@@ -57,7 +57,7 @@ public class InfoSchool {
         waitQA.until(ExpectedConditions.visibilityOfElementLocated(TheReportNameLoactor)).click();
         waitQA.until(ExpectedConditions.visibilityOfElementLocated(drop_down_sex_Locator)).click();
         WebElement txt_male_wait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(txt_male_Locator));
-        txt_male_wait.sendKeys("بنين" , Keys.ENTER);
+        txt_male_wait.sendKeys("بنين", Keys.ENTER);
 
         Actions actions = new Actions(browserQA);
         try {
@@ -69,7 +69,7 @@ public class InfoSchool {
         }
 
         WebElement txt_drop_down_managements_Locator_Element = browserQA.findElement(txt_drop_down_managements_Locator);
-        actions.moveToElement(txt_drop_down_managements_Locator_Element).sendKeys("الحد الغربي" , Keys.ENTER).build().perform();
+        actions.moveToElement(txt_drop_down_managements_Locator_Element).sendKeys("الحد الغربي", Keys.ENTER).build().perform();
 
         try {
             WebElement education_office_LocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(education_office_Locator));
@@ -80,20 +80,17 @@ public class InfoSchool {
         }
 
 
-        waitQA.until(ExpectedConditions.visibilityOfElementLocated(education_office_Locator_txt)).sendKeys("مكتب الخالدية" , Keys.ENTER);
+        waitQA.until(ExpectedConditions.visibilityOfElementLocated(education_office_Locator_txt)).sendKeys("مكتب الخالدية", Keys.ENTER);
 
-        try {
-            WebElement btn_search_LocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(btn_search_Locator));
-            btn_search_LocatorWait.click();
-        } catch (Exception e) {
-            WebElement btn_search_LocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(btn_search_Locator));
-            btn_search_LocatorWait.click();
-        }
+        Thread.sleep(1000);
+
+        WebElement btn_search_LocatorWait = waitQA.until(ExpectedConditions.visibilityOfElementLocated(btn_search_Locator));
+        btn_search_LocatorWait.click();
 
         waitQA.until(ExpectedConditions.visibilityOfElementLocated(Info_Schools_Locator));
         String s = browserQA.findElement(Info_Schools_Locator).getText();
         String Info_schools_2 = "بيانات المدرسة";
-        Assert.assertEquals(s , Info_schools_2 , "البيانات غير صحيحة");
+        Assert.assertEquals(s, Info_schools_2, "البيانات غير صحيحة");
 
         waitQA.until(ExpectedConditions.visibilityOfElementLocated(btn_back_Locator)).click();
     }
